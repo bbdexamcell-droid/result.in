@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Exact A4 visual width */
+.container {
+    width: 95%;
+    max-width: 1200px;   /* keeps it clean on big screens */
+    margin: 20px auto;
+    padding: 25px 40px;
+    box-sizing: border-box;
+}
+
+
+/* HEADER */
+.header-block {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: -50px;
+}
+
+.header-block h1 {
+    font-size: 30px;
+    margin: 0px 0;
+    font-weight: 850;
+    letter-spacing: 0.0px;
+}
+
+.header-block h3 {
+    font-size: 25px;
+    margin: 12px 0;
+    font-weight: 800;
+}
+
+.header-block h4 {
+    font-size: 18px;
+    margin: 19px 0 23px 0;
+    font-weight: 550;
+}
+
+/* DETAILS TABLE */
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: -20px;
+    table-layout: fixed;
+}
+
+.details-table td {
+    padding: 2px 6px;
+    vertical-align: top;
+}
+
+/* Column Width Control */
+.details-table td:nth-child(1) {
+    width: 65%;     /* More space between col 1 and 2 */
+}
+
+.details-table td:nth-child(2) {
+    width: 35%;     /* Medium width */
+}
+
+.details-table td:nth-child(3) {
+    width: 25%;     /* Slightly smaller */
+}
+
+
+/* MARKS TABLE */
+.marks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    table-layout: fixed;   /* 🔥 alignment fix */
+}
+
+.marks-table th,
+.marks-table td {
+    border: 2.5px solid #000;
+    padding: 3px 5px;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.marks-table th {
+    background: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* Semester title row */
+#leftSemTitleRow {
+    font-size: 13px;
+    font-weight: 800;
+    background: #ffffff;
+    padding: 5px 0;
+}
+
+/* ✅ COLUMN ALIGNMENT FIX */
+/* ✅ PERFECT COLUMN DISTRIBUTION (LIKE REAL RESULT) */
+
+/* PERFECT COLUMN DISTRIBUTION */
+
+.marks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    table-layout: fixed;
+}
+
+.marks-table th,
+.marks-table td {
+    border: 1.5px solid #000;
+    padding: 3px 5px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.2;
+}
+
+.marks-table th {
+    font-weight: 700;
+}
+
+
+/* Footer */
+.footer-section {
+    font-size: 14.5px;
+    margin-top: 10px;
+    line-height: 1.25;
+}
+
+.footer-section p {
+    margin: 2px 0;
+}
+
+.result-date {
+    text-align: center;
+    font-size: 14.5px;
+    margin: 0px 0;
+    font-weight: 300;
+    margin-top: 0px;
+}
+
+.footer-section hr {
+    margin: 8px 0;
+    border: 0;
+    border-top: 1px solid #ffffff;
+}
+
+.grievance-wrapper{
+    text-align:center;
+    margin-top:10px;
+}
+
+.grievance-btn{
+    background:#1a56ff;
+    color:#fff;
+    border:none;
+    padding:8px 20px;
+    border-radius:18px;
+    font-size:13px;
+    cursor:pointer;
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    transition:.25s;
+    margin-top: -35px;
+}
+
+.grievance-btn:hover{
+    background:#0039cb;
+}
+
+#studentName,
+#studentRoll,
+#fatherName,
+#motherName,
+#enrollmentNo,
+#branch,
+#examType,
+#status{
+  font-weight: 600;
+}

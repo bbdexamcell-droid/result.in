@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* LOGIN PAGE */
+body.login {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("1770735484848028942_5560.png") center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* LOGIN CARD */
+.card {
+  width: 360px;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  background: #4fc3b7;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  font-size: 14px;
+}
+
+form {
+  padding: 18px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 11px;
+  background: #4fc3b7;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* RESULT PAGE */
+.result-page {
+  max-width: 1000px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 6px;
+}
+
+.result-page h1 {
+  margin-bottom: 6px;
+}
+
+.roll {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 2px solid #ddd;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.status-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

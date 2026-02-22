@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BBDU Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="result-page">
+  <h1>Babu Banarasi Das University, Lucknow</h1>
+  <p class="roll">Result Details</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Session</th>
+        <th>Year</th>
+        <th>Semester</th>
+        <th>Exam Type</th>
+        <th>Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="resultBody">
+      <!-- Dynamic rows will come here -->
+    </tbody>
+  </table>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const roll = params.get("roll");
+
+if (!roll) {
+  alert("Roll number missing");
+}
+
+fetch("students.csv")
+  .then(response => response.text())
+  .then(data => {
+    const rows = data.trim().split("\n").slice(1);
+    const semesters = new Set();
+
+    rows.forEach(row => {
+      const cols = row.split(",");
+      
+      // ROLL column index = 0
+      // SEMESTER column index = 10
+      
+      if (cols[0] == roll) {
+        semesters.add(cols[10]);
+      }
+    });
+
+    const tbody = document.getElementById("resultBody");
+
+    if (semesters.size === 0) {
+      tbody.innerHTML = `<tr><td colspan="6">No Result Found</td></tr>`;
+      return;
+    }
+
+    semesters.forEach(sem => {
+
+      // Auto calculate year from semester
+      let year = Math.ceil(sem / 2);
+
+      const tr = document.createElement("tr");
+
+      tr.innerHTML = `
+        <td>2024-25</td>
+        <td>${year}</td>
+        <td>${sem}</td>
+        <td>MAIN</td>
+        <td>RG</td>
+        <td>
+          <button class="status-btn" onclick="openResult('${sem}')">View</button>
+        </td>
+      `;
+
+      tbody.appendChild(tr);
+    });
+  });
+
+function openResult(semester) {
+  window.location.href = "marksheet.html?roll=" + roll + "&sem=" + semester;
+}
+</script>
+
+</body>
+</html>

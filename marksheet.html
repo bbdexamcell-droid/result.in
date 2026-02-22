@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Print Form</title>
+    <link rel="stylesheet" href="marksheet.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-block">
+        <h1>Babu Banarasi Das University, Lucknow</h1>
+        <h3>School of Engineering</h3>
+        <h4>Bachelor of Technology</h4>
+        <h4 id="sessionLine"></h4>
+    </div>
+
+    <!-- STUDENT DETAILS -->
+    <table class="details-table">
+        <tr>
+            <td><b>Name:</b> <span id="studentName"></span></td>
+            <td><b>Roll No:</b> <span id="studentRoll"></span></td>
+            <td><b>Exam Type:</b> <span id="examType"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>Father Name:</b> <span id="fatherName"></span></td>
+            <td><b>Enrollment No:</b> <span id="enrollmentNo"></span></td>
+            <td><b>Status:</b> <span id="status"></span></td>
+        </tr>
+
+        <tr>
+            <td><b>Mother Name:</b> <span id="motherName"></span></td>
+            <td><b>Branch:</b> <span id="branch"></span></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <!-- SEMESTER TABLE -->
+    <table class="marks-table">
+
+        <!-- ✅ COLUMN WIDTH CONTROL (VERY IMPORTANT) -->
+        <colgroup>
+            <col style="width:20.83%">
+            <col style="width:8.33%">
+            <col style="width:8.33%">
+            <col style="width:8.33%">
+            <col style="width:8.33%">
+            <col style="width:8.33%">
+            <col style="width:8.33%">
+            <col style="width:14.58%">
+            <col style="width:14.58%">
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th colspan="9" id="leftSemTitleRow"></th>
+            </tr>
+
+            <tr>
+                <th rowspan="2">Subject Code</th>
+                <th colspan="2">ESE Marks</th>
+                <th colspan="2">CIA Marks</th>
+                <th colspan="2">Total</th>
+                <th rowspan="2">Credit</th>
+                <th rowspan="2">Grade</th>
+            </tr>
+
+            <tr>
+                <th>Obt</th>
+                <th>Max</th>
+                <th>Obt</th>
+                <th>Max</th>
+                <th>Obt</th>
+                <th>Max</th>
+            </tr>
+        </thead>
+
+        <tbody id="leftTable"></tbody>
+
+    </table>
+    
+    
+
+
+
+    <!-- FOOTER -->
+    <div class="footer-section">
+
+        <hr>
+
+        <p><b>Carry Over Paper(s):</b> <span id="carryPapers">-</span></p>
+        <p><b>Carry Over Paper(s) Detail:</b></p>
+
+        <p class="result-date">
+    <b>Date of Declaration of Result:</b>
+    <span id="resultDate">10/02/2025</span>
+</p>
+
+<div class="grievance-wrapper">
+    <button class="grievance-btn">Grievance Form</button>
+</div>
+
+        <p><b>Note:</b> University does not own for the errors or omissions, if any in this statement.
+        The marks in the tabulation register of the university are final.</p>
+
+        <p>Final year students with PCP status in any year. Please refer to your particular year result for carryover paper code.</p>
+
+        <p>In case of result "fail" carry over paper(s) is to depict the paper in which student has failed.</p>
+
+        <p><b>ESE:</b> End semester exam</p>
+        <p><b>CIA:</b> Continuous internal assessment</p>
+        <p><b>E:</b> Marks Obtained in main exam. <b>B:</b> Marks Obtained in carry over exam.</p>
+        <p><b>PCP:</b> Promoted with carry over Paper(s).</p>
+        <p><b>PWG:</b> Pass with grace.</p>
+        <p><b>Div Not awarded:</b> Due to Carry Over Paper(s) in Current/ Previous years</p>
+        <p><b>SGPA:</b> Semester Grade Point Average</p>
+        <p><b>CGPA:</b> Cumulative Grade Point Average</p>
+
+    </div>
+
+</div>
+
+<script src="marksheet.js"></script>
+</body>
+</html>
