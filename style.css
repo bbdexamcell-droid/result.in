@@ -9,8 +9,8 @@
 body.login {
   height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url("1770735484848028942_5560.png") center/cover no-repeat;
+    linear-gradient(rgba(0,0,0,.18), rgba(0,0,0,.18)),
+    url("002.png") center center / cover no-repeat;
   overflow: hidden;
 }
 

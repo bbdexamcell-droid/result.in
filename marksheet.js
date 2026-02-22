@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
       else if (sem === 7 || sem === 8) yearText = "Final Year Session";
 
       document.getElementById("sessionLine").innerText = `${yearText}: ${session}`;
-      document.getElementById("carryPapers").innerText = student.CARRY_PAPER || "-";
 
       /* ===== Semester Name ===== */
 
@@ -92,6 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
       let totalCredit = 0;
       let weightedSum = 0;
 
+      // ⭐ NEW → carry list
+      let carryList = [];
+
       semData.forEach(s => {
 
         const ese = Number(s.ESE) || 0;
@@ -103,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const credit = Number(s.CREDIT) || 0;
 
-        // ⭐ FIXED (grade normalization)
         const grade = String(s.GRADE || "")
           .replace(/\s+/g, "")
           .toUpperCase();
@@ -112,6 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         totalCredit += credit;
         weightedSum += credit * gradePoint;
+
+        // ⭐ NEW → detect carry
+        if (grade === "F") {
+          carryList.push(s.SUBJECT_CODE);
+        }
 
         tableBody.innerHTML += `
           <tr>
@@ -127,6 +133,10 @@ document.addEventListener("DOMContentLoaded", function () {
           </tr>
         `;
       });
+
+      // ⭐ NEW → show carry papers
+      document.getElementById("carryPapers").innerText =
+        carryList.length ? carryList.join(", ") : "-";
 
       /* ===== TOTAL ROW ===== */
 
