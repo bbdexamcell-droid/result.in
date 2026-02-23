@@ -172,18 +172,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <tr>
   <td>Obt.</td>
-  <td colspan="2">${student.CREDIT_TH_OBT || 6}</td>
+  <td colspan="2">13</td>
 
   <td>Obt.</td>
-  <td colspan="2">${student.CREDIT_PR_OBT || 5}</td>
+  <td colspan="2">4</td>
 </tr>
 
 <tr>
   <td>Max</td>
-  <td colspan="2">${student.CREDIT_TH_MAX || 21}</td>
+  <td colspan="2">20</td>
 
   <td>Max</td>
-  <td colspan="2">${student.CREDIT_PR_MAX || 5}</td>
+  <td colspan="2">4</td>
 
   <td colspan="3">${sgpa}</td>
 </tr>
